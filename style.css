@@ -70,7 +70,10 @@ section.swiss {
 
 .swissrow.topswissrow {
     border-top: solid 2px var(--gray-primary);
-    display: block;
+}
+.swissrow.topswissrow h2 {
+    grid-column-start: 2;
+    grid-column-end: 4;
 }
 .swissrow.mainswissrow {
     display: block;
@@ -95,7 +98,7 @@ section.swiss {
 
 
 .swissrow p {
-    font-size: 0.9em;
+    font-size: 1em;
 }
 
 .swissrow .fp {
@@ -227,6 +230,23 @@ div.red#1 {
     position: relative;
     top: 50%;
 }
+
+
+.red#4 p {
+    text-align: center;
+    font-size: 50px;
+    background: linear-gradient(to left,
+                    violet,
+                    indigo,
+                    blue,
+                    green,
+                    yellow,
+                    orange,
+                    red);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
 
 .invisiblepads {
     width: 45%;
