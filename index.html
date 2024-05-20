@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Paul Claret </title>
+</head>
+<body>
+
+
+    <section class="swiss">
+        <div class="swissrow topswissrow">
+            <h2>Welcome to my Portfolio.<br> Have a look</h2>
+        </div>
+        <div class="swissrow mainswissrow">
+            <h1>Paul Claret</h1>
+        </div>
+        <div class="swissrow">
+            <p class="fp">I am an engineering student currently in exchange for a semester at McGill university. <br><br> My original school is l'Ecole centrale d'Electronique. It is an engineering school specialized in electronics and computer science </p>
+            <h3>Student <br>McGill <br>ECE Paris</h3>
+            <p class="lp">I am currently in my second year at school. Last year, I ranked 5 out of 550 student with my grades. I like the work I do and know I have the required skills to start working even thoug I'm not finished with school yet.</p>
+            <p class="lp">This is why I am starting to work as a freelance</p>
+        </div>
+        <div class="swissrow">
+            <p class="fp">My first steps in programming go back years ago, before I joind my engineering school, I signed up for a programming course in highschool</p>
+            <h3>Engineering <br> My Background</h3>
+            <p class="lp">I enjoyed the course and worked on the project the teacher gave us. I was thrilled to see my work in action run on the computer.</p>
+            <p class="lp">
+                So I continued to work on some of my spare time and learned more about programmign and CS. 
+            </p>
+        </div>
+        <div class="swissrow">
+            <p class="fp">Well... not the most interesting thing about me but I build website by hand with html,css,js for simples websites like this one.</p>
+            <h3>What tech <br>Do I use ?</h3>
+            <p class="lp">But when the work is more of a web app, I use react or vuejs for the front end.</p>
+            <p class="lp"> As for the backend, I use Flask or django in python but I also like using Go for its speed</p>
+        </div>
+        <div class="swissrow">
+            <p class="fp">You know my name but thats not all there is about me. <br> I am a huge fan of sport. I train a lot in different sport like running, swimming, cycling or in the gym. In fact I would love to one day complete an IronMan.</p>
+            <h3>A bit about <br>Myself</h3>
+            <p class="lp">Fan of music too. Art, drawing, painting. This is probably why I like designing website with cool graphic design like this one.</p>
+            <p class="lp">Fun fact, did you know I based my porfolio on a swiss poster back from 1959 of Josef Müller-Brockmann named "stadtheater". <br><br>
+                Yeah here is the link: <a target="_blank" href="https://www.grapheine.com/wp-content/uploads/2013/03/stadtheater-poster-brockmann.jpg">Checkout the poster</a>
+            </p>
+        </div>
+        <div class="swissrow">
+            <p class="fp">The animation bellow is interactive</p>
+            <h3>Before Moving On</h3>
+            <p class="lp">Scroll of grab and move the tiles horizontaly and click on them to use it.</p>
+            <p class="lp">You could learn a bit more about me again. <br> :) </p>
+        </div>
+    </section>
+
+    <section class="main">
+        <div class="main" id="main">
+            <h1 id="myname">Paul Claret</h1>
+            <div class="invisiblepads"></div>
+            <div class="red" onclick="focus()" id="1"><p>textetete</p></div>
+            <div class="red" onclick="focus()" id="2"><p>textedauzdazuidhazuidhauizhdauitete</p></div>
+            <div class="red" onclick="focus()" id="3"><p>textetete</p></div>
+            <div class="red" onclick="focus()" id="4"><p>textetete</p></div>
+            <div class="red" onclick="focus()" id="5"><p>textetete</p></div>
+            <div class="red" onclick="focus()" id="6"><p>textetete</p></div>
+            <div class="red" onclick="focus()" id="7"><p>textetete</p></div>
+            <div class="red" onclick="focus()" id="8"><p>textetete</p></div>
+            <div class="red" onclick="focus()" id="9"><p>textetete</p></div>
+            <div class="red" onclick="focus()" id="10"></div>
+            <div class="red" onclick="focus()" id="11"></div>
+            <div class="red" onclick="focus()" id="12"></div>
+            <div class="red" onclick="focus()" id="13"></div>
+            <div class="invisiblepads"></div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <p class="contact">How do you like the website so far ? Great, let's work together ! <br>Contact me at: <span class="mail">paulclaret4@gmail.com</span>. I'm looking forward working with you ;)</p>
+    </section>
+
+   
+    <footer>
+        <div class="logo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur deleniti ab nisi expedita, quia eveniet? Velit facere, corporis qui, sit repellat omnis vitae in a odit necessitatibus blanditiis dignissimos voluptates!
+
+        </div>
+        <div class="socials">
+            <p>You can check my profile on the following freelancing platforms:</p>
+            <div>
+                <!-- liste d'icones etc des sites de freelance -->
+            </div>
+        </div>
+        <div class="contact">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At non excepturi eveniet aspernatur iure, quam praesentium minima voluptate, aperiam perspiciatis provident nulla repudiandae quis asperiores cupiditate. Harum necessitatibus eveniet atque!</div>
+    </footer>
+
+    <script>
+        var stopscrollbehaviour = false; // when div foes active, turns true to stop scroll resize
+        var preivous_scroll = 0;
+
+        function focus() {
+            // check there wasn't a previous focus (if there was, put his original js heigh and margin)
+            divs = document.getElementsByClassName("red")
+            let counter = 0;
+            for (let item of divs) {
+                if (item.classList.contains("active")) {
+                    counter +=1;
+                }
+            }
+
+
+
+            if (!event) {
+                event = event.window
+            }
+            var el = (event.taget || event.srcElement)
+            if (el.classList.contains("active")) {
+                el.classList.remove("active")
+                stopscrollbehaviour = false
+                document.getElementById("main").style.overflowX = "auto"
+                document.getElementById("main").scrollTo({left: preivous_scroll, behavior:"smooth"})
+            } else {
+                if (counter == 1) {
+                    return; // already a div active so leave
+                }
+                stopscrollbehaviour = true
+                preivous_scroll = document.getElementById("main").scrollLeft 
+                console.log(preivous_scroll)
+                el.style.marginBottom = `0px`
+                el.style.marginTop = `0px`
+                el.classList.add("active")
+                let dist = 0;
+                for (let item of document.getElementById("main").children) {
+                    if (item == el) {
+                        break;
+                    }
+                    dist += item.offsetWidth + 10 // 10px margin per div to add left and right = 20 total
+                }
+
+                setTimeout(() => {
+                    document.getElementById("main").scrollTo({left: dist, behavior:"smooth"})
+                    el.style.marginBottom = `0px`
+                    el.style.height = `${document.getElementById("main").clientHeight*0.8}px`
+                    el.style.marginTop = `0px`
+                }, 200)
+                
+                // document.getElementById("main").style.overflowX = "hidden"
+            }
+    }
+    </script>
+
+</body>
+<script>
+    divs = document.getElementsByClassName("red")
+    // console.log(divs)
+    mainsection = document.getElementById("main")
+    // console.log(mainsection)
+    mainsection.addEventListener("scroll", offset)
+    function offset() {
+        let sizes = []
+
+        if (stopscrollbehaviour) { return; }
+
+        for (let item of divs) {
+            let totalwidth = document.documentElement.clientWidth
+            let containerheight = document.getElementById("main").clientHeight
+            let distance = item.getBoundingClientRect().left
+            // console.log("div n°: ", item.id, distance)
+            // console.log(totalwidth, totalwidth*0.2, totalwidth*0.4, totalwidth*0.6, totalwidth*0.8)
+            if ( distance > 0.2*totalwidth && distance < 0.5*totalwidth) {
+                let divheight = (distance/(totalwidth)*2)*containerheight*0.8
+                sizes.push({"item": item, "height": divheight})
+                item.style.height = `${divheight}px`
+                item.style.marginTop = `${(containerheight-divheight)/2}px`
+                item.style.marginBottom = `${(containerheight-divheight)/2}px`
+                // console.log(item.style.height)
+            } else if ( distance > 0.5*totalwidth && distance < 0.8*totalwidth) {
+                let divheight = (1-(distance/totalwidth))*2*containerheight*0.8
+                sizes.push({"item": item, "height": divheight})
+                item.style.height = `${divheight}px`
+                item.style.marginTop = `${(containerheight-divheight)/2}px`
+                item.style.marginBottom = `${(containerheight-divheight)/2}px`
+            } else if (distance <= 0.2 * totalwidth) {
+                var divheight= ((totalwidth*0.2)/(totalwidth))*2*containerheight*0.8
+                sizes.push({"item": item, "height": divheight})
+                item.style.height = `${divheight}px`; // Taille des divs pour ceux avant la plage souhaitée
+                item.style.marginTop = `${(containerheight - divheight) / 2}px`;
+                item.style.marginBottom = `${(containerheight - divheight) / 2}px`;
+            } else if (distance >= 0.8 * totalwidth) {
+                var divheight =  (1-((totalwidth*0.8)/totalwidth))*2*containerheight*0.8
+                sizes.push({"item": item, "height": divheight})
+                item.style.height = `${divheight}px`; // Taille des divs pour ceux après la plage souhaitée
+                item.style.marginTop = `${(containerheight - divheight) / 2}px`;
+                item.style.marginBottom = `${(containerheight - divheight) / 2}px`;
+            }
+            }
+        // console.log(sizes)
+        // find the biggest object and make his width a little bigger
+    }
+    
+
+
+    function init() {
+    let totalWidth = document.documentElement.clientWidth;
+    let containerHeight = document.getElementById("main").clientHeight;
+    let divs = document.getElementsByClassName("red");
+
+    for (let item of divs) {
+        let distance = item.getBoundingClientRect().left;
+        item.onclick = focus
+        // console.log(item)
+        // console.log(distance, totalWidth*0.8)
+        // console.log(distance >= 0.8 * totalWidth)
+
+        if (distance > 0.2 * totalWidth && distance < 0.5 * totalWidth) {
+            // console.log("1")
+            let divHeight = (distance / totalWidth) * 2 * containerHeight * 0.8;
+            item.style.height = `${divHeight}px`;
+            item.style.marginTop = `${(containerHeight - divHeight) / 2}px`;
+            item.style.marginBottom = `${(containerHeight - divHeight) / 2}px`;
+        } else if (distance > 0.5 * totalWidth && distance < 0.8 * totalWidth) {
+            // console.log("2")
+            let divHeight = (1 - (distance / totalWidth)) * 2 * containerHeight * 0.8;
+            item.style.height = `${divHeight}px`;
+            item.style.marginTop = `${(containerHeight - divHeight) / 2}px`;
+            item.style.marginBottom = `${(containerHeight - divHeight) / 2}px`;
+        } else if (distance <= 0.2 * totalWidth) {
+            // console.log("3")
+            var height = ((totalWidth*0.2)/(totalWidth))*2*containerHeight*0.8
+            item.style.height = `${height}px`; // Taille des divs pour ceux avant la plage souhaitée
+            item.style.marginTop = `${(containerHeight - height) / 2}px`;
+            item.style.marginBottom = `${(containerHeight - height) / 2}px`;
+        } else if (distance >= 0.8 * totalWidth) {
+            // console.log("4")
+            var height =  (1-((totalWidth*0.8)/totalWidth))*2*containerHeight*0.8
+            item.style.height = `${height}px`; // Taille des divs pour ceux après la plage souhaitée
+            item.style.marginTop = `${(containerHeight - height) / 2}px`;
+            item.style.marginBottom = `${(containerHeight - height) / 2}px`;
+        }
+       
+    }
+}
+
+
+   
+
+    window.addEventListener("DOMContentLoaded", init)
+    
+</script>
+</html>

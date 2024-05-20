@@ -1,0 +1,13 @@
+:root {
+    --red-primary: rgb(255, 0, 0);
+    --red-lighter: rgb(255, 51, 51);
+    --red-lighter-light: rgb(255, 77, 77);
+
+    --gray-primary: #302F2F;
+    --gray-lighter: #54504F;
+    --gray-lighter-light: #656565;
+
+    --white: #FFFFFF;
+    --white-draker: #E9E9E9;
+    --white-dark: #D6D6D6;
+}
