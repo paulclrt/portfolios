@@ -78,9 +78,9 @@ section.swiss {
 }
 
 
-    .swissrow h1, h2, h3, p  {
-      animation: clip-path-reveal-1 5s ease 1;
-    }
+.swissrow > h1, .swissrow > h2, .swissrow > h3, .swissrow > p  {
+    animation: clip-path-reveal-1 5s ease 1;
+}
   
   
   @keyframes clip-path-reveal-1 {
@@ -153,39 +153,6 @@ section.swiss {
 
 /* ANIMATION SECTION */
 
-
-#myname {
-    z-index: -1;
-    position: fixed;
-    color: var(--white);
-
-    font-family: "GTFU";
-    font-size: 10em;
-    text-align: center;
-    margin-top: auto;
-    margin-bottom: auto;
-
-    animation-name: name;
-    animation-duration: 60s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-
-}
-
-
-/* change animation to background video because it messes up the borders*/
-@keyframes name {
-    from {
-        left: -600px;
-    }
-    50% {
-        left: 100%;
-    }
-    to { 
-        left: -600px;
-    }
- }
-
 section.main {
     height: 100vh;
     display: block;
@@ -238,12 +205,6 @@ div.main * {
     box-sizing: border-box;
 }
 
-div.red#1 {
-    background-image: url("ece.jpg");
-    object-fit: scale-down;
-
-}
-
 .main .red {
     background-color: var(--gray-primary);
     width: 5%;
@@ -253,12 +214,24 @@ div.red#1 {
     overflow: hidden;
 }
 
-.red p{
+.red * {
+    color: black;
+}
+.red .content {
+    box-sizing: border-box;
+    max-height: 90%;
+    padding: 2%;
+}
+
+.red .content * {
+    display: none;
+    width: 100%;
+}
+
+.red h3 {
+    display: block;
     text-align: center;
-    overflow: hidden;
-    color: white;
-    position: relative;
-    top: 50%;
+    max-height: 10%;
 }
 
 
@@ -290,8 +263,7 @@ div.red#1 {
     width: 85%;
     margin: 0px !important;
     height: 85%;
-    background-image: url("ece.jpg");
-    background-size: cover;
+    background-color: white;
 }
 
 
