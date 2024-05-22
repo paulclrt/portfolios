@@ -63,15 +63,12 @@ section.swiss {
 .swissrow {
     margin: 0 8% 0 8%;
     padding: 2% 0 2% 0;
-    border-bottom: 2px solid var(--gray-primary);
+    /* border-bottom: 2px solid var(--gray-primary); */
     min-height: 20%;
     display: grid;
     grid-template: 1fr / 1fr 2fr 1fr 1fr;
 }
 
-.swissrow.topswissrow {
-    border-top: solid 2px var(--gray-primary);
-}
 .swissrow.topswissrow h2 {
     grid-column-start: 2;
     grid-column-end: 4;
@@ -80,6 +77,38 @@ section.swiss {
     display: block;
 }
 
+
+    .swissrow h1, h2, h3, p  {
+      animation: clip-path-reveal-1 5s ease 1;
+    }
+  
+  
+  @keyframes clip-path-reveal-1 {
+    0%, 25% { clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%); }
+    50% { clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); }
+  }
+
+
+.bar {
+    height: 0.2vh;
+    display: inline-block;
+    background-color: black;
+    margin: 0 8% 0 8%;
+}
+
+.topbar { animation: baranim 1.5s ease-out 0.9s 1 forwards;}
+.baranim2 { animation: baranim 1.5s ease-out 1s 1 forwards; }
+.baranim3 { animation: baranim 1.5s ease-out 1.2s 1 forwards; }
+.baranim4 { animation: baranim 1.5s ease-out 1.3s 1 forwards; }
+.baranim5 { animation: baranim 1.5s ease-out 1.4s 1 forwards; }
+.baranim6 { animation: baranim 1.5s ease-out 1.5s 1 forwards; }
+.baranim7 { animation: baranim 1.5s ease-out 1.6s 1 forwards; }
+
+
+@keyframes baranim {
+    from {width: 0%;}
+    to {width: 84%;}
+}
 
 
 .swissrow h1 {
