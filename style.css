@@ -69,7 +69,7 @@ section.swiss {
     grid-template: 1fr / 1fr 2fr 1fr 1fr;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 800px) {
     .swissrow {
         grid-template: repeat(4, 1fr) / 1fr;
     }
@@ -224,6 +224,7 @@ div.main * {
     transition: width 0.5s;
     z-index: 2;
     overflow: hidden;
+    display: inline-block;
 }
 
 .red * {
@@ -233,12 +234,9 @@ div.main * {
     box-sizing: border-box;
     max-height: 90%;
     padding: 2%;
+    display: block;
 }
 
-.red .content * {
-    display: none;
-    width: 100%;
-}
 
 .red h3 {
     display: block;
@@ -317,7 +315,7 @@ footer {
     padding-top: 2%;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 800px) {
     footer {
         grid-template: 1fr 2fr 1fr / 1fr;
         height: 80vh;

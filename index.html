@@ -54,8 +54,8 @@
         <div class="swissrow">
             <p class="fp">The animation bellow is interactive</p>
             <h3>Before Moving On</h3>
-            <p class="lp">Scroll or grab and move the tiles horizontaly and click on them to use it.</p>
-            <p class="lp">You could learn a bit more about me again. <br> :) </p>
+            <p class="lp">Scroll or grab and move the tiles horizontaly.</p>
+            <p class="lp">I am still working on it. I'll soon add content inside the tiles for now its just there :/ </p>
         </div>
         <div class="bar baranim baranim7"></div>
     </section>
@@ -171,6 +171,11 @@
         </div>
     </section>
 
+
+    <!-- <section class="projects"> -->
+<!-- Future section -->
+    <!-- </section> -->
+
     <section class="contact">
         <p class="contact">Think we could build great things together ? <br>Good ! let's get to work ! <br>Contact me at: <span class="mail">paulclaret4@gmail.com</span></p> 
         <!-- . I'm looking forward working with you ;) -->
@@ -268,7 +273,6 @@
             //     el = el.parentElement;
             //     console.log("parent:", el.parentElement)
             // }
-            console.log("elem:", el)
             
             if (el.classList.contains("active")) {
                 el.classList.remove("active")
@@ -278,11 +282,10 @@
                 while (el.children !== undefined) {
                     for (let i of el.children) {
                         i.style.display = "none"
-                        console.log(i, i.children)
                         el = i.children
-                        i.innerHTML = i.innerHTML
                     }
                 }
+
             } else {
                 if (counter == 1) {
                     return; // already a div active so leave
@@ -306,14 +309,7 @@
                     el.style.marginBottom = `0px`
                     el.style.height = `${document.getElementById("main").clientHeight*0.8}px`
                     el.style.marginTop = `0px`
-                    while (el.children !== undefined) {
-                    for (let i of el.childNodes) {
-                        console.log(i)
-                        i.style.display = "block"
-                        el = i.children
-                        i.innerHTML = i.innerHTML
-                    }
-                }
+                    el.innerHTML = "<p style='max-width:100%'>aaaaaaaaaaaaaaaaaaaaaaaaa<br>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>"
                 }, 200)
                 
                 // document.getElementById("main").style.overflowX = "hidden"
